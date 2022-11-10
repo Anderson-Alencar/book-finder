@@ -1,0 +1,14 @@
+.card {
+  margin: 1rem;
+  width: 14rem;
+  padding: 0.5rem;
+}
+
+.card-image {
+  height: 16rem;
+}
+
+.search-bar {
+  width: 45rem;
+  margin: auto;
+}

@@ -14,7 +14,7 @@ function SearchBar() {
   };
 
   return (
-    <InputGroup className="mb-3">
+    <InputGroup className="mb-3 search-bar">
       <Form.Control onChange={({ target }) => setSearch(target.value)} />
       <Button
         variant="outline-success"
