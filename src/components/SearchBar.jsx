@@ -9,8 +9,13 @@ function SearchBar() {
   const [search, setSearch] = useState('');
 
   const searchBooks = async () => {
-    const books = await getBooks(search);
-    setBooks(books);
+    const data = await getBooks(search);
+    if (data.items) {
+      const books = data.items.map((item) => item.volumeInfo);
+      setBooks(books);
+    } else {
+      setBooks([]);
+    }
   };
 
   return (
@@ -18,6 +23,7 @@ function SearchBar() {
       <Form.Control onChange={({ target }) => setSearch(target.value)} />
       <Button
         variant="outline-success"
+        disabled={(search.length < 2)}
         onClick={searchBooks}
       >
         Buscar

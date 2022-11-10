@@ -16,6 +16,7 @@ function BookList() {
           />
         ))
       }
+      {books.length === 0 && <span>Sem resultados para essa busca</span>}
     </Row>
   );
 }
