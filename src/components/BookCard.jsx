@@ -1,7 +1,8 @@
 import React from 'react';
-import { Card, ListGroup } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import noImage from '../assets/images/no-image.png';
+import ModalBookDetails from './ModalBookDetails';
 
 function BookCard({ book }) {
   return (
@@ -14,13 +15,13 @@ function BookCard({ book }) {
       <Card.Body>
         <Card.Title>{ book.title }</Card.Title>
       </Card.Body>
-      <ListGroup>
-        <ListGroup.Item>
-          {
-            book.averageRating ? `${book.averageRating} ⭐` : 'Sem avaliações'
-          }
-        </ListGroup.Item>
-      </ListGroup>
+      <ModalBookDetails book={book} />
+      <hr />
+      <Card.Text>
+        {
+          book.averageRating ? `${book.averageRating} ⭐` : 'Sem avaliações'
+        }
+      </Card.Text>
     </Card>
   );
 }
