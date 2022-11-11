@@ -1,0 +1,38 @@
+.card {
+  margin: 1rem;
+  width: 14rem;
+  padding: 0.5rem;
+}
+
+.card-image {
+  height: 16rem;
+}
+
+.search-bar {
+  width: 45rem;
+  margin: auto;
+}
+
+.pagination-bar {
+  margin: auto;
+}
+
+.image-modal {
+  width: 14rem;
+  height: 19rem;
+}
+
+.fav-button {
+  border: none;
+  background-color: white;
+  width: 1rem;
+}
+
+.row-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  margin-top: 5rem;
+}
