@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import BookContext from './BookContext';
 
 function BookProvider({ children }) {
+  const favoriteStart = JSON.parse(localStorage.getItem('favorites'));
+
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [favoriteBooks, setFavoriteBooks] = useState(favoriteStart || []);
 
   // eslint-disable-next-line react/jsx-no-constructed-context-values
   const contextValue = {
@@ -15,6 +18,8 @@ function BookProvider({ children }) {
     setLoading,
     currentPage,
     setCurrentPage,
+    favoriteBooks,
+    setFavoriteBooks,
   };
 
   return (

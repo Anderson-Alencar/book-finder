@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import BookProvider from './context/books/BookProvider';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/app.css';
+import Favorites from './pages/Favorites';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <BookProvider>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </BookProvider>
     </div>
