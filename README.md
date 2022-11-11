@@ -2,7 +2,7 @@
 
 Este projeto é um buscador de livor que ultiliza a API Google Books. O projeto é um desafio proposto pelo FB Online.
 
-## Requisitos / Funcionalidade
+## Requisitos / Funcionalidades
 
 * O usuário gostaria de digitar algumas palavras e ver uma lista de livros que tenha relação com a sua busca
 * O usuário deve utilizar uma paginação para acessar o restante dos resultados.
