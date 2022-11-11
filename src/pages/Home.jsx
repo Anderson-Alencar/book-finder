@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Button, Col, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import BookList from '../components/BookList';
 import SearchBar from '../components/SearchBar';
 import BookContext from '../context/books/BookContext';
@@ -33,6 +34,9 @@ function Home() {
             setSearch={setSearch}
             searchBooks={searchBooks}
           />
+          <Link to="/favorites">
+            <Button>Meus favoritos</Button>
+          </Link>
           <BookList />
           {books.length > 0 && <PaginationBar />}
         </Col>

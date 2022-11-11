@@ -21,3 +21,18 @@
   width: 14rem;
   height: 19rem;
 }
+
+.fav-button {
+  border: none;
+  background-color: white;
+  width: 1rem;
+}
+
+.row-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  margin-top: 5rem;
+}
