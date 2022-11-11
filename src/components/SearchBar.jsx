@@ -1,23 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import { InputGroup, Form, Button } from 'react-bootstrap';
-import getBooks from '../api/requests';
-import BookContext from '../context/books/BookContext';
+import PropTypes from 'prop-types';
 
-function SearchBar() {
-  const { setBooks } = useContext(BookContext);
-
-  const [search, setSearch] = useState('');
-
-  const searchBooks = async () => {
-    const data = await getBooks(search);
-    if (data.items) {
-      const books = data.items.map((item) => item.volumeInfo);
-      setBooks(books);
-    } else {
-      setBooks([]);
-    }
-  };
-
+function SearchBar({ search, setSearch, searchBooks }) {
   return (
     <InputGroup className="mb-3 search-bar">
       <Form.Control onChange={({ target }) => setSearch(target.value)} />
@@ -33,3 +18,9 @@ function SearchBar() {
 }
 
 export default SearchBar;
+
+SearchBar.propTypes = {
+  search: PropTypes.string.isRequired,
+  setSearch: PropTypes.func.isRequired,
+  searchBooks: PropTypes.func.isRequired,
+};

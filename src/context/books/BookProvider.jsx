@@ -4,11 +4,17 @@ import BookContext from './BookContext';
 
 function BookProvider({ children }) {
   const [books, setBooks] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
 
   // eslint-disable-next-line react/jsx-no-constructed-context-values
   const contextValue = {
     books,
     setBooks,
+    loading,
+    setLoading,
+    currentPage,
+    setCurrentPage,
   };
 
   return (
